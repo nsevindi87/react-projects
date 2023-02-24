@@ -41,7 +41,7 @@ function App() {
       {/* 2 Baslik atilir ve Bootstrapten sablon secilir */}
       <h1 className='my-4'>useState'den Veri Cekme</h1>
       <div className='row'>
-      {/* 
+      {/* 3
       -- data bir array oldugu icin map methodu ile verileri tek tek yazdiriyoruz
       -- her bir veriyi bootstrapten cektigimiz sablon ile özellestirip yazdiriyoruz.
       -- key={index} yazilmak zorunda
@@ -63,7 +63,7 @@ function App() {
       </div>
         ))}
 
-      {/* 
+      {/* 4
       -- {} arasindaki kisim bir component olarak ayri bir belgeye yazilabilir. 
       -- Daha sonra export ve import edilerek örnegin <CardComponent /> olarak kullanilabilir. 
       */}
