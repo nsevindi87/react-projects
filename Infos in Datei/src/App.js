@@ -1,47 +1,25 @@
 import './App.css';
 import React, { useState } from "react";
+/* 2
+-- Daha önce olusturdugumuz db.json isimli belgeden verileri import ediyoruz.
+-- Bu veriler array icerisinde objeler olarak yazilir.
+-- export edilmez direkt istenilen isimle import edilir.
+ */
+import infos from "./db.json"
 
 
 function App() {
 
-  //1- state olusturulur ve data girilir
-  const [data, setData] = useState([
-    {
-      "userId": 1,
-      "id": 1,
-      "title": "quidem molestiae enim",
-      "category": "computer",
-      "color": "black"
-    },
-    {
-      "userId": 2,
-      "id": 2,
-      "title": "sunt qui excepturi placeat culpa",
-      "category": "phone",
-      "color": "green"
-    },
-    {
-      "userId": 3,
-      "id": 3,
-      "title": "omnis laborum odio",
-      "category": "laptop",
-      "color": "red"
-    },
-    {
-      "userId": 4,
-      "id": 4,
-      "title": "non esse culpa molestiae omnis sed optio",
-      "category": "camera",
-      "color": "orange"
-    }
-  ]);
+  //1- state olusturulur
+  //3- import edilen state baslangic degeri olarak useState icine tanimlanir.
+  const [data, setData] = useState(infos);
 
   return (
     <div className="App">
-      {/* 2 Baslik atilir ve Bootstrapten sablon secilir */}
+      {/* 4 Baslik atilir ve Bootstrapten sablon secilir */}
       <h1 className='my-4'>useState'den Veri Cekme</h1>
       <div className='row'>
-      {/* 
+      {/* 5
       -- data bir array oldugu icin map methodu ile verileri tek tek yazdiriyoruz
       -- her bir veriyi bootstrapten cektigimiz sablon ile özellestirip yazdiriyoruz.
       -- key={index} yazilmak zorunda
@@ -63,7 +41,7 @@ function App() {
       </div>
         ))}
 
-      {/* 
+      {/* 6
       -- {} arasindaki kisim bir component olarak ayri bir belgeye yazilabilir. 
       -- Daha sonra export ve import edilerek örnegin <CardComponent /> olarak kullanilabilir. 
       */}
