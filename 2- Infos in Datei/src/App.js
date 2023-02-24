@@ -1,16 +1,16 @@
-import './App.css';
-import React, { useState } from "react";
-/* 2
+/* 1
 -- Daha önce olusturdugumuz db.json isimli belgeden verileri import ediyoruz.
 -- Bu veriler array icerisinde objeler olarak yazilir.
 -- export edilmez direkt istenilen isimle import edilir.
  */
+import './App.css';
+import React, { useState } from "react";
 import infos from "./db.json"
 
 
 function App() {
 
-  //1- state olusturulur
+  //2- state olusturulur
   //3- import edilen state baslangic degeri olarak useState icine tanimlanir.
   const [data, setData] = useState(infos);
 
