@@ -3,7 +3,8 @@ import axios from "axios"
 import { useState } from 'react';
 
 const AddUser = () => {
-    //STATES====================
+    //!STATES====================
+    //7- Yeni eklenecek kisi icin baslangic STATE eklenir.
     const [formData, setFormData] = useState({
         name: "",
         mobile: "",
@@ -11,7 +12,9 @@ const AddUser = () => {
         password: "",
     })
 
-    //ADD PERSON====================
+    //!ADD PERSON====================
+    //10- Bu fonksiyonda inputlar ile degistirilmis STATE axios.post ile gönderilir ve formun icin bosaltilir.
+    //11- UPDATE icin UserDashboarda gidiniz.
     const handleFormSubmit = async (e) => {
         await axios.post("http://localhost:5000/posts", formData)
         setFormData({
@@ -23,6 +26,8 @@ const AddUser = () => {
     }
 
     return (
+        //8- Bütün inputlara value ve onChange eklenir. OnChange fonksiyonunda bütün foksiyon alinir ve üzerine degisen state getirilir.
+
         <div className='container'>
             <div className='row'>
                 <div className='col-5'>
@@ -69,6 +74,7 @@ const AddUser = () => {
                     />
                 </div>
                 <div class="mb-3">
+                    {/* 9- onClick ile yeni bir fonksiyon tanimlanir. */}
                     <button onClick={handleFormSubmit} className='btn btn-success'>Add User</button>
                 </div>
             </div>

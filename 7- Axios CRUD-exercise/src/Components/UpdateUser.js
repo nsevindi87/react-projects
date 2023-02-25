@@ -5,6 +5,7 @@ const UpdateUser = ({getData, setUpdateData,updateData}) => {
 
 
     //UPDATE PERSON ====================
+    //16- Bu fonksiyon ile ilgili id'ye güncellenen veri axios.put ile güncellenir. Ve güncel data tekrar cagrilir.
     const handleUpdate = async(id)=>{
         await axios.put(`http://localhost:5000/posts/${updateData.id}`, updateData)
         getData()
@@ -12,6 +13,8 @@ const UpdateUser = ({getData, setUpdateData,updateData}) => {
 
   return (
     <div>
+        {/* 13- Gönderilen veriler value ile input icerisine yazdirilir.
+        14- Input icerisindeki veriler onChange ile degistirilir. */}
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -62,7 +65,9 @@ const UpdateUser = ({getData, setUpdateData,updateData}) => {
                     </div>
                 </div>
                 <div class="modal-footer">
+                    {/* 17- Iptal islemi icin  data-bs-dismiss="modal" kullanilmali*/}
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    {/* 15- Gerekli güncellemeler yapildiktan sonra butona yeni bir fonksiyon tanimlanir.  */}
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onClick={()=>handleUpdate()}>Update User</button>
                 </div>
             </div>
