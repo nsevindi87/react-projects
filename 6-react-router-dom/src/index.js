@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 /* 
 1- React router dom ile farkli sayfalar arasinda gecis nasil yapilir.
+ -- react-dom ve react.router-dom npm ile yüklenmeli
  -- createRoot, createBrowserRouter, RouterProvider import edilmeli
 */
 import { createRoot } from 'react-dom/client';
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   //3 - Provider ile daha önce olusturdugumuz router gönderilecek.
-  //4- Devami icin Navbar.js componenetine gidiniz.
+  //4- Devami icin components/Navbar.js componenetine gidiniz.
   <RouterProvider router={router} />
 );
 

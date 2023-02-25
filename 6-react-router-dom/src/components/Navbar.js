@@ -10,6 +10,8 @@ const Navbar = () => {
       {/* 
       4B - Buton tanimlamasi ve hangi butona tiklandiginda hangi URL'e gidilmesi gerektigi belirtilir.
        -- Ilgili URL ye gidildiginde de hangi komponenetin cagrilacagini index.js de belirtildigini daha önce belirtmistik.
+       -- Navlink import et ve kullan. 
+       --to kismina ilgili URL yazilmali
       */}
       <NavLink to='/'>Home</NavLink>
       <NavLink to='/about'>About</NavLink>

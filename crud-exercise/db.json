@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "name": "User1",
+      "mobile": "12345",
+      "email": "user@gmail.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "name": "User2",
+      "mobile": "898799",
+      "email": "user2@gmail.com",
+      "password": "3443434",
+      "id": 2
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
